@@ -6,10 +6,14 @@ import UTILS from "./utils";
 
 function App() {
   return (
-    <div className="QuizApp">
-      {UTILS.isMobile() ? <MobileLayout /> : <DesktopLayout />}
-      {!UTILS.isMobile() ? <MobileLayout /> : <DesktopLayout />}
-    </div>
+    <>
+      <div className="QuizApp">
+        {UTILS.isMobile() ? <MobileLayout /> : <DesktopLayout />}
+      </div>
+      <div className="QuizApp">
+        {!UTILS.isMobile() ? <MobileLayout /> : <DesktopLayout />}
+      </div>
+    </>
   );
 }
 

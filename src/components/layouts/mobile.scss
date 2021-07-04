@@ -1,0 +1,15 @@
+.quiz-mobile-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .banner-top {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-bottom {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,9 @@
+.quiz-desktop-layout {
+  display: flex;
+  .banner-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
