@@ -1,0 +1,14 @@
+.choice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid;
+  background-color: white;
+  &-image {
+    height: 10;
+    width: 10;
+  }
+  &-label {
+    color: black;
+  }
+}
