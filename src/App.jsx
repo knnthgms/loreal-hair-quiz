@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.scss";
-import DesktopLayout from "./components/layouts/DesktopLayout";
-import MobileLayout from "./components/layouts/MobileLayout";
+import DesktopLayout from "./layouts/DesktopLayout";
+import MobileLayout from "./layouts/MobileLayout";
 import UTILS from "./utils";
 
-function App() {
+const App = () => {
   return (
     <>
       <div className="QuizApp">
@@ -15,6 +15,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;

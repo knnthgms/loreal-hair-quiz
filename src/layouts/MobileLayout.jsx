@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import STRINGS from "../../constants/Strings";
-import IMAGES from "../../assets/images";
-import Question2 from "../questions/Question2";
-import Button from "../button";
+import STRINGS from "../constants/Strings";
+import IMAGES from "../assets/Images";
+// import Question2 from "../questions/Question2";
+import Result1 from "../components/results/Result8";
+import Button from "../components/Button";
 import "./mobile.scss";
 
 const MobileLayout = () => {
@@ -11,7 +12,7 @@ const MobileLayout = () => {
   if (startQuiz)
     return (
       <div className="quiz-mobile-layout">
-        <Question2 />
+        <Result1 />
       </div>
     );
 

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import STRINGS from "../../constants/Strings";
-import IMAGES from "../../assets/images";
-import Button from "../button";
-// import Question2 from "../questions/Question1";
-import Result1 from "../results/Result9";
+import STRINGS from "../constants/Strings";
+import IMAGES from "../assets/Images";
+import Button from "../components/Button";
+import Question1 from "../components/questions/Question1";
+// import Result1 from "../results/Result9";
 import "./desktop.scss";
 
 const DesktopLayout = () => {
@@ -12,8 +12,8 @@ const DesktopLayout = () => {
   if (startQuiz)
     return (
       <div className="quiz-desktop-layout">
-        {/* <Question2 /> */}
-        <Result1 />
+        <Question1 />
+        {/* <Result1 /> */}
       </div>
     );
 

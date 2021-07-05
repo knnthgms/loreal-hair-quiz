@@ -1,18 +1,18 @@
 import React from "react";
 import STRINGS from "../../constants/Strings";
-import IMAGES from "../../assets/images";
-import Button from "../button";
+import IMAGES from "../../assets/Images";
+import Button from "../Button";
 import "./style.scss";
 
 const Result5 = () => {
   return (
     <div className="result-card">
       <div className="result-card-desc">
-        <span>{STRINGS.option5Match}</span>
-        <span>{STRINGS.option5Desc}</span>
-        <span>{STRINGS.recommendedFor}</span>
-        <span>{STRINGS.option5Rec}</span>
-        <span>{STRINGS.option5RecAdd}</span>
+        <span className="match-title">{STRINGS.option5Match}</span>
+        <span className="match-desc">{STRINGS.option5Desc}</span>
+        <span className="match-rec-text">{STRINGS.recommendedFor}</span>
+        <span className="match-rec">{STRINGS.option5Rec}</span>
+        <span className="match-rec-add">{STRINGS.option5RecAdd}</span>
         <div className="result-card-cta">
           <Button>{STRINGS.shopNow}</Button>
         </div>
