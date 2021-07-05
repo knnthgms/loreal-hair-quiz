@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import STRINGS from "../../constants/Strings";
 import IMAGES from "../../assets/Images";
 import Choice from "../Choice";
@@ -33,18 +34,34 @@ const choices = [
   },
 ];
 
-const Question2 = () => {
+const Question2 = (props) => {
+  const { onChoose, getResults } = props;
+  const [selected, setSelected] = useState(false);
+  const selectionMade = (id) => {
+    onChoose(id);
+    setSelected(true);
+  };
   return (
     <div className="question">
       <div className="question-text">{STRINGS.question2}</div>
       <div className="question-options">
         {choices.map((choice) => (
-          <Choice id={choice.id} icon={choice.icon} label={choice.label} />
+          <Choice
+            key={choice.id}
+            icon={choice.icon}
+            label={choice.label}
+            onClick={() => selectionMade(choice.id)}
+          />
         ))}
       </div>
-      <Button>{STRINGS.getResults}</Button>
+      {selected && <Button onClick={getResults}>{STRINGS.getResults}</Button>}
     </div>
   );
+};
+
+Question2.propTypes = {
+  onChoose: PropTypes.func.isRequired,
+  getResults: PropTypes.func.isRequired,
 };
 
 export default Question2;

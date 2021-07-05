@@ -1,25 +1,26 @@
-import React, { memo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import COLORS from "../../constants/Colors";
 import "./style.scss";
 
-const Choice = memo(function Choice({ icon, label }) {
+const Choice = ({ icon, label, onClick }) => {
   return (
-    <div style={{ borderColor: COLORS.lavender }} className="choice-card">
+    <button
+      type="button"
+      onClick={onClick}
+      style={{ borderColor: COLORS.lavender }}
+      className="choice-card"
+    >
       <img alt="icon" className="choice-card-image" src={icon} />
       <span className="choice-card-label">{label} </span>
-    </div>
+    </button>
   );
-});
-
-Choice.propTypes = {
-  icon: PropTypes.string,
-  label: PropTypes.string,
 };
 
-Choice.defaultProps = {
-  icon: "",
-  label: "default card",
+Choice.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  icon: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
 };
 
 export default Choice;
