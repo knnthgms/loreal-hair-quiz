@@ -1,0 +1,12 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  &-text {
+    display: inherit;
+    justify-content: center;
+  }
+  &-options {
+    display: inherit;
+    justify-content: space-evenly;
+  }
+}

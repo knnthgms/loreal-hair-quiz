@@ -1,0 +1,16 @@
+.result-card {
+  display: flex;
+  flex-direction: row;
+  &-desc {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    .result-card-cta {
+      display: inherit;
+      justify-content: center;
+    }
+  }
+  &-img {
+    display: inherit;
+  }
+}

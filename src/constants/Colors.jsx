@@ -10,3 +10,4 @@ const COLORS = {
   nutrifier: "#D28B3B",
   volumetry: "#5FB496",
 };
+export default COLORS;

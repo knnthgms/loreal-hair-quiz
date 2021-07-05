@@ -47,7 +47,7 @@ const STRINGS = {
   choice5B: `Flat Hair`,
   takeQuiz: `Take the quiz`,
   shopNow: `Shop now`,
-  getResults: `Get your results`,
+  getResults: `Get quiz results`,
   next: `Next`,
   quiz: `Quiz`,
   quizTitle: `L'Oréal Professionnel Hair Care Routine`,
