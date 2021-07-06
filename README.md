@@ -1,6 +1,6 @@
 # L'oréal professional hair routine quiz
 
-Simple quiz to suggest hair care products for specific hair needs and goals.
+Simple quiz to suggest hair care products for specific hair needs and goals. [Demo](https://romantic-khorana-75dcbf.netlify.app)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
