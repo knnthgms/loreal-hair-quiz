@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import STRINGS from "../../constants/Strings";
 import IMAGES from "../../assets/Images";
@@ -34,7 +34,12 @@ const choices = [
 ];
 
 const Question1 = (props) => {
-  const { onChoose } = props;
+  const { onChoose, onNext } = props;
+  const [selected, setSelected] = useState(false);
+  const selectionMade = (id) => {
+    onChoose(id);
+    setSelected(true);
+  };
 
   return (
     <div className="question">
@@ -46,10 +51,18 @@ const Question1 = (props) => {
               key={choice.id}
               icon={choice.icon}
               label={choice.label}
-              onClick={() => onChoose(choice.id)}
+              onClick={() => selectionMade(choice.id)}
             />
           );
         })}
+      </div>
+      <div className="actions">
+        {selected && (
+          // eslint-disable-next-line
+          <div className="next-btn" onClick={onNext}>
+            {STRINGS.next}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -57,6 +70,7 @@ const Question1 = (props) => {
 
 Question1.propTypes = {
   onChoose: PropTypes.func.isRequired,
+  onNext: PropTypes.func.isRequired,
 };
 
 export default Question1;

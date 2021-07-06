@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import STRINGS from "../../constants/Strings";
 import IMAGES from "../../assets/Images";
 import Choice from "../Choice";
-import Button from "../Button";
 import "./style.scss";
 
 const choices = [
@@ -54,7 +53,14 @@ const Question2 = (props) => {
           />
         ))}
       </div>
-      {selected && <Button onClick={getResults}>{STRINGS.getResults}</Button>}
+      <div className="actions">
+        {selected && (
+          // eslint-disable-next-line
+          <div className="next-btn" onClick={getResults}>
+            {STRINGS.getResults}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
