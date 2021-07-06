@@ -1,12 +1,24 @@
 @import "../../styles/colors.scss";
 @import "../../styles/mixins.scss";
 
+@include screen("desktop") {
+  .result-card {
+    &-desc {
+      width: unset;
+    }
+    &-img {
+      width: 70%;
+    }
+  }
+}
+.mobile {
+  display: none;
+}
 .result-card {
-  text-align: center;
   display: flex;
-  flex-direction: column-reverse;
+  text-align: center;
   color: $absolute;
-  justify-content: stretch;
+  // justify-content: stretch;
   box-shadow: inset 0px 0px 1px 1rem $absolute;
   padding: 1rem;
   &-desc {
@@ -15,6 +27,7 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    width: 60%;
     span {
       text-align: center;
     }
@@ -42,20 +55,32 @@
   &-img {
     display: inherit;
     img {
+      margin: auto;
+      // height: 100%;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       overflow: hidden;
     }
   }
 }
+
 .match-title {
   font-weight: 600;
   font-size: 1.2rem;
   margin: 1rem 0;
 }
+
 @include screen("mobile") {
+  .result-card {
+    flex-direction: column-reverse;
+    &-desc {
+      width: unset;
+    }
+  }
   .desktop {
     display: none;
+  }
+  .mobile {
+    display: block;
   }
 }

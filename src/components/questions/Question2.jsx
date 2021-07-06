@@ -35,7 +35,7 @@ const choices = [
 
 const Question2 = (props) => {
   const { onChoose, getResults } = props;
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useState(null);
   const selectionMade = (id) => {
     onChoose(id);
     setSelected(id);

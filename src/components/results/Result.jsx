@@ -21,7 +21,7 @@ const Result = (props) => {
       <div className="result-card-img">
         <img alt="product" src={IMAGES.intro2} />
       </div>
-      <span className="match-title">{matchTitle}</span>
+      <span className="match-title mobile">{matchTitle}</span>
     </div>
   );
 };
