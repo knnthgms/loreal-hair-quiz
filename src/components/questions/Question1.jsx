@@ -35,10 +35,10 @@ const choices = [
 
 const Question1 = (props) => {
   const { onChoose, onNext } = props;
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useState(null);
   const selectionMade = (id) => {
     onChoose(id);
-    setSelected(true);
+    setSelected(id);
   };
 
   return (
@@ -51,13 +51,14 @@ const Question1 = (props) => {
               key={choice.id}
               icon={choice.icon}
               label={choice.label}
+              isSelected={choice.id === selected}
               onClick={() => selectionMade(choice.id)}
             />
           );
         })}
       </div>
       <div className="actions">
-        {selected && (
+        {selected !== null && (
           // eslint-disable-next-line
           <div className="next-btn" onClick={onNext}>
             {STRINGS.next}

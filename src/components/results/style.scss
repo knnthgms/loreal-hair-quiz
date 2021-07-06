@@ -1,20 +1,61 @@
+@import "../../styles/colors.scss";
+@import "../../styles/mixins.scss";
+
 .result-card {
+  text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
+  color: $absolute;
+  justify-content: stretch;
+  box-shadow: inset 0px 0px 1px 1rem $absolute;
+  padding: 1rem;
   &-desc {
     display: inherit;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
     span {
       text-align: center;
+    }
+    .match-desc {
+      margin-bottom: 1rem;
+    }
+    .match-rec,
+    .match-rec-text,
+    .match-rec-add {
+      font-size: 0.75rem;
     }
     .result-card-cta {
       display: inherit;
       justify-content: center;
+      margin-top: 1.2rem;
+      width: 100%;
+      div {
+        background-color: $absolute;
+        color: $white;
+        padding: 0.2rem 1rem;
+        width: 25%;
+      }
     }
   }
   &-img {
     display: inherit;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+}
+.match-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+@include screen("mobile") {
+  .desktop {
+    display: none;
   }
 }
