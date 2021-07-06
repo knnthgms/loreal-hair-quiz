@@ -47,7 +47,7 @@ const DesktopLayout = () => {
   return (
     <div className="quiz-desktop-layout">
       <div className="banner-left">
-        <img alt="quiz-banner" src={IMAGES.intro1} width="100%" />
+        <img alt="quiz-banner" src={IMAGES.intro1} />
       </div>
       <div className="banner-right">
         <span>{STRINGS.quizTagLineQ}</span>

@@ -49,7 +49,7 @@ const STRINGS = {
   shopNow: `Shop now`,
   getResults: `Get quiz results`,
   next: `Next`,
-  quiz: `Quiz`,
+  quiz: `- Quiz -`,
   quizTitle: `L'Oréal Professionnel Hair Care Routine`,
   quizTagLine: `Discover your personalised haircare routine`,
   quizTagLineQ: `What's the best routine for your hair?`,

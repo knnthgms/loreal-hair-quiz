@@ -7,9 +7,9 @@ import UTILS from "./utils";
 const App = () => {
   return (
     <>
-      <div className="QuizApp">
+      {/* <div className="QuizApp">
         {UTILS.isMobile() ? <MobileLayout /> : <DesktopLayout />}
-      </div>
+      </div> */}
       <div className="QuizApp">
         {!UTILS.isMobile() ? <MobileLayout /> : <DesktopLayout />}
       </div>

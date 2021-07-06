@@ -18,7 +18,7 @@ const Result9 = () => {
         </div>
       </div>
       <div className="result-card-img">
-        <img alt="product" src={IMAGES.intro2} width="100%" />
+        <img alt="product" src={IMAGES.intro2} />
       </div>
     </div>
   );

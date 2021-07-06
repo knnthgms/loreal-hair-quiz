@@ -3,7 +3,7 @@ import STRINGS from "../constants/Strings";
 import IMAGES from "../assets/Images";
 import Question1 from "../components/questions/Question1";
 import Question2 from "../components/questions/Question2";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 import result from "../constants/Answers";
 import "./mobile.scss";
 
@@ -47,15 +47,22 @@ const MobileLayout = () => {
   return (
     <div className="quiz-mobile-layout">
       <div className="banner-top">
-        <span>{STRINGS.quiz}</span>
-        <span>{STRINGS.quizTitle}</span>
+        <span className="banner-header">{STRINGS.quiz}</span>
+        <span className="banner-title">{STRINGS.quizTitle}</span>
       </div>
       <div className="banner-image">
-        <img alt="quiz-banner" src={IMAGES.cover} width="100%" />
+        <img alt="quiz-banner" src={IMAGES.cover} />
       </div>
       <div className="banner-bottom">
-        <span>{STRINGS.quizTagLine} </span>
-        <Button onClick={() => setStartQuiz(true)}>{STRINGS.takeQuiz}</Button>
+        <span className="banner-tag">{STRINGS.quizTagLine} </span>
+        {/* eslint-disable-next-line */}
+        <div
+          role="button"
+          className="banner-cta"
+          onClick={() => setStartQuiz(true)}
+        >
+          {STRINGS.takeQuiz}
+        </div>
       </div>
     </div>
   );

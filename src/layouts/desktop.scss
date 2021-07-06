@@ -1,5 +1,7 @@
 .quiz-desktop-layout {
   display: flex;
+  align-self: center;
+  width: 80vw;
   .banner-right {
     display: flex;
     flex-direction: column;
