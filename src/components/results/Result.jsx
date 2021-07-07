@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import STRINGS from "../../constants/Strings";
-import IMAGES from "../../assets/Images";
+import IMAGES from "../../constants/Images";
 import "./style.scss";
 
 const Result = (props) => {

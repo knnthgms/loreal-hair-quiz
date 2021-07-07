@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import STRINGS from "../constants/Strings";
-import IMAGES from "../assets/Images";
+import IMAGES from "../constants/Images";
 import Question1 from "../components/questions/Question1";
 import Question2 from "../components/questions/Question2";
 // import Button from "../components/Button";
